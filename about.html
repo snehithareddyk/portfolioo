@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Me</title>
+        <style>
+            body {
+                margin: 0;
+                background: #000000;
+                font-family: Arial, sans-serif;
+                overflow: hidden;
+                cursor: pointer;
+                }
+            nav {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            z-index: 1000;
+            }
+            nav .logo {
+            color: #fff;
+            margin-left: 30px;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            }
+            nav ul {
+            display: flex;
+            list-style: none;
+            }
+            nav ul li {
+            margin-right: 70px;
+            }
+            nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            }
+            nav ul li a:hover {
+            color: #ee4f06;
+            }
+            
+            .container{
+            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(12, 11, 10);
+            }
+              .container .skills{
+                height: 500px;
+                width: 550px ;
+                
+                margin: 10px;
+                border: 1px solid rgba(255, 255, 255, .25);
+                border-radius: 20px;
+                background-color: rgba(1, 1, 1, 0.45);
+                box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+                backdrop-filter: blur(15px);
+              }
+              .container .text{
+                height: 500px;
+                width: 450px ;
+                
+                margin: 20px;
+                border-radius: 20px;
+              }
+              .skills h1{
+                color: #fff;
+                margin-top: 30px;
+                font-size: 30px;
+                text-align: center;
+              }
+              .text h1{
+                color: #fff;
+                margin-top:50px;
+                margin-bottom: 20px;
+                font-size: 37px;
+                text-align: left;
+              }
+              .text p{
+                font-size: 20px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                color: #dcdcdc;
+                font-weight:500;
+              }
+
+
+
+
+              .icon-grid {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+                padding: 10px;
+              }
+          
+              .icon-card {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100px;
+              }
+          
+              .icon-card img {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 10px;
+                transition: transform 0.3s ease;
+              }
+              .icon-card img:hover {
+                transform: scale(1.2);
+             }
+              .icon-card p {
+                font-size: 16px;
+                margin-top: 5px;
+                color: #fff;
+              }
+
+
+              .circle {
+                height: 24px;
+                width: 24px;
+                border-radius: 24px;
+                background-color: black;
+                position: fixed; 
+                top: 0;
+                left: 0;
+                pointer-events: none;
+                z-index: 99999999; /* so that it stays on top of all other elements */
+              }
+
+        </style>
+
+    </head>
+    <body>
+        <nav>
+            <div class="logo">Portfolio.</div>
+            <ul>
+              <li><a href="main.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+      
+            
+          </nav>
+          <section>
+            <div class="container">
+                <div class="text">
+                    <h1>About <span style="color: #ee4f06;">Me</span></h1>
+                    <p>A passionate developer and tech enthusiast currently pursuing a degree in Computer 
+                      Science. I enjoy diving into new technologies, building projects, and solving real-world problems
+                       through code.</p>
+                    <p>With a focus on continuously improving my skills, I aim to create innovative solutions
+                      that make an impact. Whether it's developing software, exploring new frameworks, or working on 
+                      collaborative projects, I'm always eager to learn and grow in the tech space.</p>
+
+                </div>
+                <div class="skills">
+                    <h1>My <span style="color: #ee4f06;">Skills</span></h1>
+                    <div class="icon-grid">
+                        <div class="icon-card">
+                          <img src="icons/html-5.png" alt="HTML">
+                          <p>HTML</p>
+                        </div>
+                        <div class="icon-card">
+                          <img src="icons/css-3.png" alt="CSS">
+                          <p>CSS</p>
+                        </div>
+                        <div class="icon-card">
+                          <img src="icons/java-script.png" alt="JavaScript">
+                          <p>JavaScript</p>
+                        </div>
+                        <div class="icon-card">
+                          <img src="icons/1174949_js_react js_logo_react_react native_icon.svg" alt="React">
+                          <p>React</p>
+                        </div>
+                        <div class="icon-card">
+                          <img src="icons/1012818_code_development_logo_nodejs_icon.svg" alt="Node">
+                          <p>Node</p>
+                        </div>
+                        <div class="icon-card">
+                          <img src="icons/java.png" alt="Java">
+                          <p>Java</p>
+                        </div>
+                        <div class="icon-card">
+                          <img src="icons/python.png" alt="Python">
+                          <p>Python</p>
+                        </div>
+                        <div class="icon-card">
+                          <img src="icons/1012821_code_development_logo_mysql_icon.svg" alt="MySQL">
+                          <p>MySQL</p>
+                        </div>
+                        <div class="icon-card">
+                          <img src="icons/google-cloud.svg" alt="Google Cloud">
+                          <p>Google Cloud</p>
+                        </div>
+                        <div class="icon-card">
+                            <img src="icons/salesforce.png" alt="Google Cloud">
+                            <p>Salesforce</p>
+                          </div>
+
+                      </div>
+                </div>
+            </div>
+          </section>
+
+
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+
+
+          <script>
+            const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+const colors = [
+  "#ee4f06",
+  "#FFE5B4",
+  "#FFD3A5",
+  "#FFC085",
+  "#FFAD60",
+  "#FF9C42",
+  "#FF8A21",
+  "#FF7B00",
+  "#FF6900",
+  "#FF5700",
+  "#FF4500",
+  "#FF4500",
+  "#E62E00",
+  "#CC2900",
+  "#B32400",
+  "#992000",
+  "#7F1C00",
+  "#661800",
+  "#4C1300",
+  "#331000",
+  "#190A00",
+  "#3d005e"
+];
+
+circles.forEach(function (circle, index) {
+  circle.x = 0;
+  circle.y = 0;
+  circle.style.backgroundColor = colors[index % colors.length];
+});
+
+window.addEventListener("mousemove", function(e){
+  coords.x = e.clientX;
+  coords.y = e.clientY;
+  
+});
+
+function animateCircles() {
+  
+  let x = coords.x;
+  let y = coords.y;
+  
+  circles.forEach(function (circle, index) {
+    circle.style.left = x - 12 + "px";
+    circle.style.top = y - 12 + "px";
+    
+    circle.style.scale = (circles.length - index) / circles.length;
+    
+    circle.x = x;
+    circle.y = y;
+
+    const nextCircle = circles[index + 1] || circles[0];
+    x += (nextCircle.x - x) * 0.3;
+    y += (nextCircle.y - y) * 0.3;
+  });
+ 
+  requestAnimationFrame(animateCircles);
+}
+
+animateCircles();
+          </script>
+    </body>
+</html>

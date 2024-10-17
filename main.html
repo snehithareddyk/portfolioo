@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="main.css">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <title>Portfolioo</title>
+
+  </head>
+  <body>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <div class="logo">Portfolio.</div>
+      <ul>
+        <li><a href="main.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>  
+    </nav>
+
+    <!-- Text on the left side of the canvas -->
+    <div class="home" id="home"> 
+      <div class="home-content">
+        <h3>Hello!</h3>
+        <h1 style="color: rgb(184, 184, 184);">I'm <span style="color: #ee4f06;">Snehitha,</span></h1>
+        <h3><span class="text"></span></h3>
+      </div>
+      <div class="icons">
+        <ul>
+          <li>
+            <a class="facebook" href="https://github.com/snehithareddyk">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="bx bxl-github" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter" href="https://www.linkedin.com/in/snehitha-reddy-705040227/">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="bx bxl-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+          <li>
+            <a class="instagram" href="https://www.instagram.com/05._.sneha/">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="bx bxl-instagram" aria-hidden="true"></i>
+            </a>
+          </li>
+          <!--<li>
+            <a class="google" href="#">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <i class="fa fa-google-plus" aria-hidden="true"></i>
+            </a>
+          </li>-->
+        </ul>
+      </div>
+      <div class="container">
+        <div class="center">
+          <button class="btn">
+            <a href="/Users/snehitha/Downloads/SnehithaKommasaniResume.pdf" download>
+            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+            </svg>
+            <span>RESUME</span>
+            </a>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+
+
+
+
+
+
+
+
+    <script src="main.js"></script>
+    <script>
+        var typed = new Typed('.text', {
+            strings: ["Frontend Developer", "Computer Science UnderGrad", "Web Developer"],
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay:1000,
+            loop: true
+        });
+    </script>
+
+    <!-- Three.js script and canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script>
+      // Setup the scene, camera, and renderer
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setClearColor(0x000000); // Set background color to black
+      renderer.shadowMap.enabled = true; // Enable shadows
+      document.body.appendChild(renderer.domElement);
+
+      // Create a sphere geometry and material
+      const geometry = new THREE.SphereGeometry(2, 21, 21); // Increased size to 2
+      const material = new THREE.MeshStandardMaterial({ color: 0xe6e2d3 });
+      const sphere = new THREE.Mesh(geometry, material);
+      sphere.position.set(3, 0, 0); // Set position to the right side
+      sphere.castShadow = false; // Disable sphere to cast shadow
+      scene.add(sphere);
+      
+      // Add a point light
+      const pointLight = new THREE.PointLight(0xe6e2d3, 1);
+      pointLight.position.set(2, 6, 9);
+      pointLight.castShadow = true; // Enable point light to cast shadow
+      scene.add(pointLight);
+
+      // Set shadow properties for the point light
+      pointLight.shadow.mapSize.width = 512;  // Default
+      pointLight.shadow.mapSize.height = 512; // Default
+      pointLight.shadow.camera.near = 0.5;    // Default
+      pointLight.shadow.camera.far = 50;      // Default
+
+      // Camera position
+      camera.position.z = 6;
+
+      // Animation variables
+      let speed = 0.09; // Speed of rotation
+      let colorChangeSpeed = 0.0007; // Speed of color change
+      let hue = 0.1; // Initial hue value
+
+      // Resize function to handle window resizing
+      function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix(); // Update the camera's projection matrix
+        renderer.setSize(window.innerWidth, window.innerHeight); // Update renderer size
+      }
+
+      // Add event listener for window resize
+      window.addEventListener('resize', onWindowResize, false);
+
+      // Animation loop
+      function animate() {
+        requestAnimationFrame(animate);
+
+        // Rotate the sphere
+        sphere.rotation.y += speed;
+
+        // Update sphere color based on hue
+        hue += colorChangeSpeed;
+        if (hue > 1) {
+          hue = 0; 
+        } // Loop hue value back to 0
+        material.color.setHSL(hue, 1, 0.5); // Set color using HSL
+
+        // Render the scene
+        renderer.render(scene, camera);
+      }
+
+      animate();
+    </script>
+
+  </body>
+</html>
